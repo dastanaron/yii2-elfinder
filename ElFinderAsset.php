@@ -54,8 +54,8 @@ class ElFinderAsset extends AssetBundle
         ];
         $lang = Yii::$app->language;
         if (!in_array($lang, $langs)) {
-            if (strpos($lang, '_')) {
-                $lang = substr($lang, 0, strpos($lang, '_'));
+            if (strpos($lang, '-')) {
+                $lang = substr($lang, 0, strpos($lang, '-'));
                 if (!in_array($lang, $langs)) {
                     $lang = false;
                 }
